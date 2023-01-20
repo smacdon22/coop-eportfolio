@@ -1,0 +1,118 @@
+<link rel="stylesheet" href="sbstyles.css">
+<meta name="viewport" content="width=100%, initial-scale=1.0">
+<script src="sbscripts.js"></script>
+<title></title>
+<div class="stfxLibrarySearchBar" id="stfxLibrarySearchBar">
+	<div class="image-background">
+	<div class="labelz" role="header">
+	<h2 class="libel" id="novaSearch" style="display: block;">Search Novanet</h2>
+
+	<h2 class="libel" id="journalSearch" style="display:none;">Search Journals</h2>
+
+	<h2 class="libel" id="dbSearch" style="display:none;">Search Databases</h2>
+
+	<h2 class="libel" id="dcSearch" style="display:none;">Search Digital Collections</h2>
+
+	<h2 class="libel" id="stfxSearch" style="display:none;">Search StFX Scholar</h2>
+
+	<h2 class="libel" id="sgSearch" style="display:none;">Search Subject Guides</h2>
+
+	<h2 class="libel" id="gsSearch" style="display:none;">Search Google Scholar</h2>
+
+	<h2 class="libel" id="dvSearch" style="display:none;">Search Dataverse</h2>
+
+	<h2 class="libel" id="arSearch" style="display:none;">Search University Archives</h2>
+
+	<h2 class="libel" id="crSearch" style="display: none;">Search Course Reserves</h2>
+
+	<h2 class="libel" id="faqSearch" style="display:none;">Search our FAQ</h2>
+	</div>
+
+	<div class="tab" role="navigation"><button class="tablinks active" id="defaultOpen" onclick="newTab(event, 'Novanet', 'novaSearch')"><h3>Novanet</h3></button><button class="tablinks" onclick="newTab(event, 'Databases', 'dbSearch')"><h3>Databases</h3></button><button class="tablinks" onclick="newTab(event, 'Journals', 'journalSearch')"><h3>Journals</h3></button><button class="tablinks" onclick="newTab(event, 'Google Scholar', 'gsSearch')"><h3>Google Scholar</h3></button><button class="tablinks" onclick="newTab(event, 'Subject Guides', 'sgSearch')"><h3>Subject Guides</h3></button><button class="tablinks" onclick="newTab(event, 'FAQ', 'faqSearch')"><h3>FAQ</h3></button><button class="tablinks" onclick="newTab(event, 'Course Reserves', 'crSearch')"><h3>Course Reserves</h3></button><div class="drop"><button class="dropbtn" onclick="document.getElementById('doubledown').style.display=\"block\"" onmouseover="document.getElementById('doubledown').style.display='block'" onmouseout="document.getElementById('doubledown').style.display='none'" style="background-color: rgba(255, 255, 255, 0);"><h3>More...</h3></button><div class="doubledown" id="doubledown" style="display: none;" onmouseover="document.getElementById('doubledown').style.display='block'" onmouseout="document.getElementById('doubledown').style.display='none'"> <ul><li><button class="tablinks" onclick="newTab(event, 'Google Scholar', 'gsSearch')"><h3>Google Scholar</h3></button></li><li><button class="tablinks" onclick="newTab(event, 'Subject Guides', 'sgSearch')"><h3>Subject Guides</h3></button></li><li><button class="tablinks" onclick="newTab(event, 'FAQ', 'faqSearch')"><h3>FAQ</h3></button></li><li><button class="tablinks" id="stfxResources" onclick="newTab(event, 'StFX Scholar', 'stfxSearch')"><h3>StFX Scholar</h3></button></li><li><button class="tablinks" id="DCbut" onclick="newTab(event, 'Digital Collections', 'dcSearch')"><h3>Digital Collections</h3></button></li><li><button class="tablinks" onclick="newTab(event, 'Dataverse', 'dvSearch')"><h3>Dataverse</h3></button></li><li><button class="tablinks" onclick="newTab(event, 'Archives', 'arSearch')"><h3>University Archives</h3></button></li><li><button class="tablinks" onclick="newTab(event, 'Course Reserves', 'crSearch')"><h3>Course Reserves</h3></button></li></ul></div></div>
+	</div>
+	</div>
+	<div class="tabcontent" id="Novanet" style="display: block;">
+	<p>Find books, eBooks, journal articles, and more from Novanet member libraries.</p>
+
+	<form onsubmit="noSymbol(novas.value, novaspec.value, '&tab=STFX&search_scope=STFX');return false;" role="form" data-drupal-form-fields="novas,blanknova"><label class="screen-reader-only" for="novas">search novanet</label><input class="sbar" id="novas" name="novaterm" placeholder="search novanet..." role="search" type="text"><input class="searchbut" type="submit" value="search"><fieldset><legend class="screen-reader-only">Novanet filters</legend><label class="screen-reader-only" for="blanknova">all placeholder</label><input id="blanknova" name="novaspec" style="display:none" type="radio" value=""><label><input id="nnall" checked="checked" class="radioOptions" name="novaspec" onclick="document.getElementById('novas').placeholder='search novanet...';" type="radio" value="">All</label><label><input id="nnbooks" class="radioOptions" name="novaspec" onclick="document.getElementById('novas').placeholder='search books on novanet...';" type="radio" value="&mfacet=rtype,include,books,1">Books</label><label><input id="articles" class="radioOptions" name="novaspec" onclick="document.getElementById('novas').placeholder='search articles on novanet...';" type="radio" value="&mfacet=rtype,include,articles,1">Articles</label></fieldset></form>
+
+	<h4><a class="abut" href="https://stfx.novanet.ca/discovery/search?vid=01NOVA_STFX:STFX&lang=en&mode=advanced" target="_blank">Advanced Search<span class="screen-reader-only"> (opens in a new tab)</span></a> | <a class="abut" href="https://stfx.on.worldcat.org/discovery" target="_blank">Worldcat<span class="screen-reader-only"> (opens in a new tab)</span></a></h4>
+	</div>
+
+	<div class="tabcontent" id="Course Reserves" style="display: none;">
+	<p>Find assigned readings or books by faculty available to be borrowed through the library. Find the <a class="abut" href="https://www.mystfx.ca/sites/library/files/2021-05/Course%20Codes%202021.pdf" target="_blank">Course Code</a> for your class.</p>
+
+	<form onsubmit="noSymbol(crs.value, '', '&tab=CourseReserves&search_scope=CourseReserves');return false;" role="form" data-drupal-form-fields="crs"><label class="screen-reader-only" for="dbs">search course reserves</label><input class="sbar" id="crs" name="crterm" placeholder="search course reserves... (ex: NURS-233)" role="search" type="text"><input class="searchbut" type="submit" value="search">&nbsp;</form>
+
+	<h4><a class="abut" href="https://stfx.novanet.ca/discovery/search?vid=01NOVA_STFX:STFX&tab=CourseReserves&search_scope=CourseReserves&query=any,contains,S*" target="_blank">Browse Course Reserves<span class="screen-reader-only"> (opens in a new tab)</span></a></h4>
+	</div>
+
+	<div class="tabcontent" id="Databases" style="display: none;">
+	<p>Find databases by name.</p>
+
+	<form onsubmit="window.open('https://stfx.libguides.com/az.php?q='+ encodeURIComponent(dbterm.value));return false" role="form" data-drupal-form-fields="dbs"><label class="screen-reader-only" for="dbs">search database</label><input class="sbar" id="dbs" name="dbterm" placeholder="search list of database names..." role="search" type="text"><input class="searchbut" type="submit" value="search">&nbsp;</form>
+
+	<h4><a class="abut" href="https://stfx.libguides.com/az.php" target="_blank">Browse Database A-Z List<span class="screen-reader-only"> (opens in a new tab)</span></a></h4>
+	</div>
+
+	<div class="tabcontent" id="Subject Guides" style="display: none;">
+	<p>Find subject guides for all courses taught at StFX – start your research here!</p>
+
+	<form onsubmit="window.open('https://stfx.libguides.com/srch.php?q=' + encodeURIComponent(sgterm.value));return false" role="form" data-drupal-form-fields="sgs"><label class="screen-reader-only" for="sgs">search subject guides</label><input class="sbar" id="sgs" name="sgterm" placeholder="search subject guides..." role="search" type="text"><input class="searchbut" type="submit" value="search">&nbsp;</form>
+
+	<h4><a class="abut" href="https://stfx.libguides.com/" target="_blank">Browse Subject Guides<span class="screen-reader-only"> (opens in a new tab)</span></a></h4>
+	</div>
+
+	<div class="tabcontent" id="Journals" style="display: none;">
+	<p>Find journals by title, subject, or ISSN using Browzine. This search will not find journal articles.</p>
+
+	<form onsubmit="window.open('https://browzine.com/libraries/3054/subjects?'+ spec.value + 'query=' + encodeURIComponent(term.value));return false" role="form" data-drupal-form-fields="js"><div class="searchy"><label class="screen-reader-only" for="js">search journals</label><input class="sbar" id="js" name="term" placeholder="search list of journal titles..." role="search" type="text"><input class="searchbut" type="submit" value="search"></div><fieldset><legend class="screen-reader-only">all results, journals, or subjects</legend><label><input checked="checked" class="radioOptions" name="spec" type="radio" value="">All</label><label><input class="radioOptions" name="spec" type="radio" value="filter=journals&">Journals</label><label><input class="radioOptions" name="spec" type="radio" value="filter=subjects&">Subjects</label></fieldset></form>
+	<h4><a class="abut" href=" https://stfx.novanet.ca/discovery/jsearch?vid=01NOVA_STFX:STFX" target="_blank">Novanet A-Z Journal Search<span class="screen-reader-only"> (opens in a new tab)</span></a></h4>
+	</div>
+
+	<div class="tabcontent" id="Digital Collections" style="display: none;">
+	<p>Find publications, history, and institutional documents produced by faculty, current students, and alumni at StFX.</p>
+
+	<form onsubmit="window.open('https://stfx.cairnrepo.org/islandora/search/'+ encodeURIComponent(dcterm.value) + '?type=dismax');return false;" role="form" data-drupal-form-fields="dcs"><label class="screen-reader-only" for="dcs">search digital collections</label><input class="sbar" id="dcs" name="dcterm" placeholder="search digital collections..." role="search" type="text"><input class="searchbut" type="submit" value="search">&nbsp;</form>
+
+	<h4><a class="abut" id="dca" href="https://stfx.cairnrepo.org/islandora/object/stfx%3Aroot" target="_blank">Browse Digital Collections<span class="screen-reader-only"> (opens in a new tab)</span></a></h4>
+
+	</div>
+
+	<div class="tabcontent" id="StFX Scholar" style="display: none;">
+	<p>Find articles, theses, and other research outputs by StFX faculty and students.</p>
+
+	<form onsubmit="window.open('https://stfxscholar.cairnrepo.org/islandora/search/'+ encodeURIComponent(stfxterm.value) + '?type=dismax');return false;" role="form" data-drupal-form-fields="stfxs"><label class="screen-reader-only" for="stfxs">search saint FX scholar</label><input class="sbar" id="stfxs" name="stfxterm" placeholder="search stfx scholar..." role="search" type="text"><input class="searchbut" type="submit" value="search">&nbsp;</form>
+
+	<h4><a class="abut" id="stfxa" href="https://stfxscholar.cairnrepo.org/" target="_blank">Browse StFX Scholar<span class="screen-reader-only"> (opens in a new tab)</span></a></h4>
+	</div>
+
+	<div class="tabcontent" id="Dataverse" style="display: none;">
+	<p>Find research data created by StFX Faculty, Researchers, and students</p>
+
+	<form onsubmit="window.open('https://borealisdata.ca/dataverse/stfx/?q='+ encodeURIComponent(dvterm.value));return false;" role="form" data-drupal-form-fields="dvs"><label class="screen-reader-only" for="dvs">search data verse</label><input class="sbar" id="dvs" name="dvterm" placeholder="search dataverse..." role="search" type="text"><input class="searchbut" type="submit" value="search">&nbsp;</form>
+
+	<h4><a class="abut" id="dva" href="https://borealisdata.ca/dataverse/stfx/" target="_blank">Browse Dataverse<span class="screen-reader-only"> (opens in a new tab)</span></a></h4>
+	</div>
+
+	<div class="tabcontent" id="Archives" style="display: none;">
+	<p>Find materials that document the history of St. Francis Xavier University.</p>
+	<br><br><h4><a class="abut" id="ara" href="https://gencat.eloquent-systems.com/stfx-archives/public/" target="_blank">University Archives<span class="screen-reader-only"> (opens in a new tab)</span></a></h4>
+	</div>
+
+	<div class="tabcontent" id="Google Scholar" style="display: none;">
+	<p>Find scholarly material, journal articles, book chapters, and more through Google Scholar.  Adds “Check for full text @ X” links to your search results.</p>
+
+	<form onsubmit="window.open('https://scholar.google.com/scholar?q='+ encodeURIComponent(gsterm.value) + '&amp;inst=5140007463653430726');return false;" role="form" data-drupal-form-fields="gss"><label class="screen-reader-only" for="gss">search google scholar and get full text via stfx</label><input class="sbar" id="gss" name="gsterm" placeholder="search google scholar..." role="search" type="text"><input class="searchbut" type="submit" value="search">&nbsp;</form>
+
+	<h4><a class="abut" href="https://scholar.google.com/scholar?q=&amp;inst=5140007463653430726#d=gs_asd" target="_blank">Advanced Search<span class="screen-reader-only"> (opens in a new tab)</span></a></h4>
+	</div>
+
+	<div class="tabcontent" id="FAQ" style="display: none;">
+	<p>Find the answers to the library's most common questions, requests, and issues.</p>
+
+	<form onsubmit="window.open('https://stfx.libanswers.com/search/?t=0&amp;q='+ encodeURIComponent(faqterm.value));return false;" role="form" data-drupal-form-fields="faqs"><label class="screen-reader-only" for="faqs">search F A Q</label><input class="sbar" id="faqs" name="faqterm" placeholder="search frequently asked questions..." role="search" type="text"><input class="searchbut" type="submit" value="search">&nbsp;</form>
+
+	<h4><a class="abut" href="https://stfx.libanswers.com" target="_blank">Browse Frequently Asked Questions<span class="screen-reader-only"> (opens in a new tab)</span></a></h4>
+	</div>
+	</div>
