@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Sarah's E-Portfolio</title>
+        <script src="https://kit.fontawesome.com/08e3d49f95.js" crossorigin="anonymous"></script>
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    </head>
+	<body>
+
+        <script src="scripts.js"></script>
+		<div class="desktop">
+			<div class="shortcut" onclick="iconclick('about-me')">
+				<img src="images/my-computer-icon.png" alt="my computer icon"/>
+				<h2>About Me</h2>
+			</div>
+			<div class="shortcut" onclick="iconclick('prof-dev')">
+				<img src="images/recycling-bin-icon.png" alt="trash icon"/>
+				<h2>Professional Development</h2>
+			</div>
+			<div class="shortcut" onclick="iconclick('work-term-1')">
+				<img src="images/folder-closed-icon.png" alt="folder icon"/>
+				<h2>Work Term 1</h2>
+			</div>
+			<div class="shortcut" onclick="iconclick('work-term-2')">
+				<img src="images\folder-closed-icon.png" alt="folder icon"/>
+				<h2>Work Term 2</h2>
+			</div>
+			<div class="shortcut" onclick="iconclick('work-term-3')">
+				<img src="images\folder-closed-icon.png" alt="folder icon"/>
+				<h2>Work Term 3</h2>
+			</div>
+			<div class="shortcut" onclick="iconclick('search-box')">
+				<img src="images\old-ie-icon.png" alt="folder icon"/>
+				<h2>Search Box</h2>
+			</div>
+			<!--
+			<div class="shortcut" onclick="iconclick('pol')">
+				<img src="images\old-ie-icon.png" alt="folder icon"/>
+				<h2>Policy Check</h2>
+			</div>
+			-->
+			<div class="header" id="about-me-head" style="top:5%;left:10%;z-index:1;">
+			<h3>About Me
+			<button class="close-bt" onclick="document.getElementById('about-me-head').style.display='none'">X</button></h3>
+			<div class="page" id="about-me">
+				<button class="about-me-bt active" id="school-info-head" onclick="hide('about-me', 'school-intro');">General</button>
+				<button class="about-me-bt" id="family-info-head" onclick="hide('about-me', 'family-intro');">Family</button>
+				<button class="about-me-bt" id="french-info-head" onclick="hide('about-me', 'french-intro');">French</button>
+				<button class="about-me-bt" id="sport-info-head" onclick="hide('about-me', 'sport-intro');">Sports</button>
+				<button class="about-me-bt" id="art-info-head" onclick="hide('about-me', 'art-intro');">Arts</button>
+				<p class="about-me" id="school-intro">
+					Hello! My name is Sarah Anne MacDonald. I am in my fourth year at St. Francis Xavier University working on my bachelor of science with a computer science major and math minor. I've always loved working with numbers because of how objective they are. In math you either have the right answer, or you don't and must find out why that is. This is true with computer science too, when programming, either your code does what you want it to do, or it doesn't and you debug until it does. This makes a lot of sense to my brain, and is why I love programming so much.
+				</p>
+				<p class="about-me" id="family-intro" style="display:none;">
+					I grew up in Dartmouth, Nova Scotia, with my parents Darlene and Donald MacDonald. When I was in grade primary, we got a weimaraner puppy and named him Barrett.
+				</p>
+				<p class="about-me" id="french-intro" style="display:none;">
+					My parents enrolled me in early French immersion so I went to Shannon Park Elementary School where we started learning french on the first day of  primary. By six months in we were speaking only in french in the classroom. I continued with french immersion all the way through highschool, and passed the DELF B2 examination.
+					<button class="translate" onclick="translateIt();">Translate</button>
+				</p>
+				<p class="about-me" id="sport-intro" style="display:none;">
+					As a child I was involved in many sports and extracurriculars after school. Of course I did soccer in the summers for a few years, then because my father wanted me to be able to defend myself, I began taking martial arts. I got my black belt in MAMBEC when I was eleven and began swimming competitively that same year. I eventually quit MAMBEC after volunteering as an instructor at the age of twelve but I kept with swimming into highschool. My strengths were long distance freestyle and butterfly.
+				</p>
+				<p class="about-me" id="art-intro" style="display:none;">
+					I also did musical theatre with Dartmouth Players for five or six years and started playing the trombone in the school band in grade six. As highschool went on, I stopped most of the activities but continued with band and joined student council where I started as a grade nine representative and then held the treasurer, secretary, and external vice president positions, all while making many new friends and memories.
+				</p>
+			</div>
+			</div>
+			<div class="header" id="prof-dev-head" style="top:10%;left:15%;z-index:1;">
+			<h3>Professional Development
+			<button class="close-bt" onclick="document.getElementById('prof-dev-head').style.display='none'">X</button></h3>
+		<div class="page" id='prof-dev'>
+      <button class="prof-dev-bt active" id="coop-110-head" onclick="hide('prof-dev', 'coop-110');">COOP 110</button>
+      <button class="prof-dev-bt" id="coop-120-head" onclick="hide('prof-dev', 'coop-120');">COOP 120</button>
+      <button class="prof-dev-bt" id="coop-130-head" onclick="hide('prof-dev', 'coop-130');">COOP 130</button>
+      <button class="prof-dev-bt" id="dream-work-activity-head" onclick="hide('prof-dev', 'dream-work-activity');">Dream Work Activity</button>
+      <button class="prof-dev-bt" id="reflective-essay-head" onclick="hide('prof-dev', 'reflective-essay');">Reflective Essay</button>
+			<p class="prof-dev" id="coop-110">
+				Co-op began remotely, for the first time, May 8th 2020. The course information was delivered by narrated slideshows along with links to online resources. Attached are the four modules I completed before my final module; this e-portfolio:D<br />
+        Module 1: <a href="coop/COOP_110_Module_1_Reflective_Activities.pdf" target="_blank">Foundations and Reflection</a><br />
+        Module 2: <a href="coop/Dream_Job_Activity.pdf" target="_blank">Career Development Principles</a><br />
+        Module 3: <a href="coop/COOP_110_Module_3_Uploaded_Assignment_Final_Copy.pdf" target="_blank">Personal Development I</a><br />
+        Module 4: <a href="coop/Module_4_Reflective_Assignment.pdf" target="_blank">Personal Development II</a>
+      </p>
+			<p class="prof-dev" id="coop-120" style="display:none;">
+				The second remote co-op course, COOP 120, consisted of 7 modules. Attached are the homework for each module.<br />
+        Module 1: <a href="coop/COOP_120_Module_1.pdf" target="_blank">Skills</a><br />
+        Module 2: <a href="coop/COOP_120_Module_2.pdf" target="_blank">Cover Letter Writing</a><br />
+        Module 3: <a href="coop/COOP_120_Module_3.pdf" target="_blank">Resume Writing</a><br />
+        Module 4: <a href="coop/COOP_120_Module_4.pdf" target="_blank">Job Searching</a><br />
+        Module 5: <a href="coop/COOP_120_Module_5.pdf" target="_blank">Networking & LinkedIn</a><br />
+        Module 6: <a href="coop/COOP_120_Module_6.pdf" target="_blank">Professional Pitches</a><br />
+        Module 7: <a href="coop/COOP_120_Module_7.pdf" target="_blank">Interview Skills</a><br />
+      </p>
+			<p class="prof-dev" id="coop-130" style="display:none;">
+				The final Co-op professional development course consisted of three modules to prepare us for the workplace.<br />
+        Module 1a: <a href="coop/self-assessment.pdf" target="_blank">Conflict in the Workplace</a><br />
+      	Module 1b: <a href="coop/reflective_conflict.pdf" target="_blank">Conflict in the Workplace Reflection</a><br />
+        Module 2: <a href="coop/Bullying_Cases.pdf" target="_blank">Bullying in the Workplace</a><br />
+        Module 3: <a href="coop/email_and_voicemail.pdf" target="_blank">Communication in the Workplace</a><br />
+      </p>
+			<p class="prof-dev" id="dream-work-activity" style="display:none;">
+				The dream work activity was an evolving document, meant to be updated after each co-op course and work term. Each update would list workplace must-haves, nice-tohaves, and never-haves.<br />
+				      <a href="coop/Dream_Job_Activity_FINAL.pdf" target="_blank">Dream Work Activity</a>
+      </p>
+			<p class="prof-dev" id="reflective-essay" style="display:none;">
+				After each work term, I wrote a short paper reflecting on the past four months. These are those reflective essays.<br />
+        <strong>Work Term 1: <a href="coop/co-op reflective essay 1-1.pdf" target="_blank">Angus L Macdonald Library</a></strong> <br />
+				      Position: Summer Student Project Assistant<br />
+              Location: Antigonish, NS<br />
+              <strong>Work Term 2: <a href="coop/coopessay.pdf" target="_blank">Angus L Macdonald Library</a></strong> <br />
+      				Position: Junior Systems Developer<br />
+              Location: Antigonish, NS<br />
+              <strong>Work Term 3: <a href="coop/reflective-essay-sarah-macdonald.pdf" target="_blank">Axis Capital</a></strong> <br />
+      				Position: Business Technology Co-op<br />
+              Location: Halifax, NS
+      </p>
+		</div>
+		</div>
+			<div class="header" id="work-term-1-head" style="top:15%;left:20%;z-index:1;">
+			<h3>Work Term 1
+			<button class="close-bt" onclick="document.getElementById('work-term-1-head').style.display='none'">X</button></h3>
+			<div class="page" id="work-term-1">
+				<button class="work-term-1-bt active" id="work-term-1-intro-head" onclick="hide('work-term-1', 'work-term-1-intro');">General</button>
+				<button class="work-term-1-bt" id="library-search-box-head" onclick="hide('work-term-1', 'library-search-box');">Search Box</button>
+				<button class="work-term-1-bt" id="policy-check-head" onclick="hide('work-term-1', 'policy-check');">OA Policy</button>
+				<button class="work-term-1-bt" id="libguide-accessibility-head" onclick="hide('work-term-1', 'libguide-accessibility');">Web A11y</button>
+				<button class="work-term-1-bt" id="makerspace-research-head" onclick="hide('work-term-1', 'makerspace-research');">Makerspace</button>
+				<p class="work-term-1" id="work-term-1-intro">
+					My first work term was a Summer Student Library Assistant for the Angus L Macdonald Library. I worked with the librarians on some projects such as a new search box for the library website, a script to check open-access policies, web accessibility in LibGuides, and others.
+				</p>
+				<p class="work-term-1 has-buttons" id="library-search-box" style="display:none;">
+					The Angus L Macdonald Library website used to have a tabbed search box built into the website and using individual embedded search bars. They wanted an independent StFX themed tabbed search box to replace this and go on the home page. I built a search box with HTML/CSS that included tabs and a dropdown menu (depending on horizontal space). I used JavaScript to control the tabbing as well as resizing for the dropdown (along with some CSS rules). <br/>The content of each tab included a short paragraph about the service, the search bar and button, a link to browse the resource, and in some cases, some search options (starts with/contains, all/articles/books/etc.). The colours I used for the box are the blues found on the StFX website. <br/>Each search box has different variables necessary for the search query, this was taken care of with the JavaScript functions. After a lot of tweaking to the links and sizing, I had a version ready for production and it was added to the Angus L Macdonald Library home page <i class="fa-solid fa-face-smile-beam"></i>
+				</p>
+				<p class="work-term-1 has-buttons" id="policy-check" style="display:none;">
+					One of the librarians at the library was responsible for publishing publications to the StFX collection. In order to do this, the embargo that the publishers place must have passed. This can range from no embargo to a year or two long. She would have to search each title manually on SHERPA/RoMEO and note each embargo. <br/>I was tasked with writing a script to check each publications policy and report back the date that they can be added to StFX's collection. I wrote my script in Python and utilized SHERPA/RoMEO's API to retrieve the policy information. <br/>My program would take in a csv file with each publication's data (title, ISSN, publisher, publish date, etc.) and called the API with the given information (often the ISSN or title). The API returns a JSON formatted string of policy information, so I would then parse the result for the publication policy and then if applicable, the embargo. <br/>Next, it creates a csv file with each publication's identifying information and the publication policy, embargo, and the date that the publication may be published. One may then view this data in Microsoft Excel or a similar program and quickly check which publications are able to be published and which must wait.
+				</p>
+				<p class="work-term-1" id="libguide-accessibility" style="display:none;">
+					LibApps is a SpringShare platform which provides various customizable apps for libraries to use. LibGuides is the most popular resource, used by librarians to direct patrons to more information on a variety of subjects, related to StFX courses as well as other broader topics of interest to the library and its patrons. <br/>The LibGuides platform itself provides many structural features for librarians to use on the guides, but due to these guides being written by various librarians, the formatting consistency is sub-par and, in some cases, rendering the page inaccessible to disabled users. To remedy this, I did an accessibility audit of every LibGuide, and then made and documented the changes necessary to ensure the LibGuides met the WCAG standard. <br/>These changes included font colour/size adjustments, heading re-ordering, alternative text addition/improvements, and link title improvements as well as replacing or flagging broken links. After my changes were complete, I prepared a short web accessibility presentation to present to the librarians.
+				</p>
+				<p class="work-term-1" id="makerspace-research" style="display:none;">
+					Makerspaces are a place where makers (engineers, crafters, artists, programmers, etc.) can come together to share ideas, solve problems, and access various tools and resources that may be hard to own and maintain as an individual. The Angus L Macdonald Library was interested in starting a makerspace of their own and needed more information on what that would mean for them. <br/>I volunteered to help research this, and prepare a document with helpful information, links, and photos of all that could be included in StFX's first makerspace. This included 3D printers, Arduino/raspberry pi boards, sewing equipment, as well as many other art supplies, tools, and materials. At the end of my work term, we got a Cura Ultima 3 3D printer, which I set up and tested while I stayed on part-time during the school year.
+				</p>
+				<button class="page-links" id="search-box-github" onclick="window.open('https://github.com/stfxlibrary/searchbox'); return false;" style="display:none;">GitHub</button>
+				<button class="page-links" id="search-box-website" onclick="window.open('https://www.mystfx.ca/library/'); return false;" style="display:none;">Website</button>
+				<button class="page-links" id="policy-check-github" onclick="window.open('https://github.com/smacdon22/srpolicycheck'); return false;" style="display:none;">GitHub</button>
+			</div>
+			</div>
+			<div class="header" id="work-term-2-head" style="top:20%;left:25%;z-index:1;">
+			<h3>Work Term 2
+			<button class="close-bt" onclick="document.getElementById('work-term-2-head').style.display='none'">X</button></h3>
+			<div class="page" id="work-term-2">
+				<button class="work-term-2-bt active" id="work-term-2-intro-head" onclick="hide('work-term-2', 'work-term-2-intro');">General</button>
+				<button class="work-term-2-bt" id="work-term-2-intro-head" onclick="hide('work-term-2', '3d-printing');">3D Printing</button>
+				<button class="work-term-2-bt" id="video-tour-head" onclick="hide('work-term-2', 'video-tour');">Video Tour</button>
+				<button class="work-term-2-bt" id="dli-migration-head" onclick="hide('work-term-2', 'dli-migration');">DLI</button>
+				<button class="work-term-2-bt" id="islandora-cairnrepo-head" onclick="hide('work-term-2', 'islandora-cairnrepo');">Islandora</button>
+				<p class="work-term-2" id="work-term-2-intro">
+					For my second work term, I stayed with the Angus L Macdonald Library. During this term, I mainly worked on migrating repositories, as well as some other little projects.
+				</p>
+				<p class="work-term-2" id="3d-printing" style="display:none;">
+					Over the course of my part time work with the library during the school year, I began setting up and testing our new Ultimaker 3 3D printer. We purchased this printer for our new makerspace and planned to offer a 3D printing service for a small fee. The filament chosen is called PLA, a plant-based filament that is biodegradable. <br/>Once the machine was assembled and I had the necessary software installed, I began configuring. First, as part of each printing session, I level the printing plate so that it barely touches the nozzle. This goes through a sequence and uses a card that came with the machine to test the difference. Then I began printing little bugs as test prints. As I observe how these are printing, I alter some settings and try again until I am satisfied with the quality. I then began trying larger prints, different colours, and more complex prints that would require support structures and other new settings changed. <br/>As I worked on configuring and documenting the printing process, my manager Margaret started working on the form we would use for 3D printing requests. This form is hosted on a LibApps product which includes a queue and other tools that help with the process. Once the school year was over and I began my full-time term again, I trained some of the other librarians and they are now responsible for the printing services.
+				</p>
+				<p class="work-term-2 has-buttons" id="video-tour" style="display:none;">
+					A fun little side project I worked on during my part time work was a virtual tour of the library. To start we did a virtual tour of just the Celtic Collection with our Celtic Collections Librarian Susan Cameron. <br/>We used my phone to shoot the video but had a gimbal to keep it steady. We also purchased a lavalier microphone which would record the audio onto my computer. Susan introduced the different features of the collection, and we took some photos of interesting pieces. <br/>Then once we got all the footage and audio that we needed, I began editing. Margaret paid for the premium version of Camtasia which I used to put the clips together as well as animate some lower-thirds, openings, and section dividers. I also added a royalty free Celtic jig quietly over the video. I also was able to put closed captioning right in the video <i class="fa-solid fa-face-smile-beam"></i>
+				</p>
+				<p class="work-term-2 has-buttons" id="dli-migration" style="display:none;">
+					The main project I worked on for my second work term was the migration of Data Liberation Initiative (DLI) Training Repository from a CUDO repository they were in to a dataverse repository. I was provided with the presentation and metadata files as the librarians had gotten those from CUDO. Next, I used the dataverse API along with some python to process all the files, check that they open, reformat some to PDF, and then prepare to upload them through API calls. <br/>This task was assigned to me because my manager Margaret had been asked to work on this, but she thought I might find the experience beneficial, so she gave it to me instead. <br/>There were weekly meetings about this project, and I was collaborating with librarians from all across the country! Then, they did a presentation about the migration project. This was presented in person at the IASSIST conference in Gothenburg Sweden and my name and photo were included because I was a part of the team working on this project! And since they publish all their presentations, this one will be in the repository as well! Which means I now have a doi to look back to with my name and photo!
+				</p>
+				<p class="work-term-2" id="islandora-cairnrepo" style="display:none;">
+					Near the end of my second work term, Margaret assigned a task similar to the DLI migration, but limited to StFX resources! I was to upload the files and metadata of Coady Extension archives to our Islandora Cairnrepo. <br/>This consisted of processing the metadata and files and formatting them into .xml files that the repository could parse. This took a lot of work mapping the variables to the correct metadata, and successfully uploading the files (images, videos, PDFs, audio, etc.). I am returning to work part time again next semester and will be continuing this project then.
+				</p>
+				<button class="page-links" id="dli-migration-github" onclick="window.open('https://github.com/smacdon22/dli_migration'); return false;" style="display:none;">GitHub</button>
+			</div>
+			</div>
+			<div class="header" id="work-term-3-head" style="top:25%;left:30%;z-index:1;">
+			<h3>Work Term 3
+			<button class="close-bt" onclick="document.getElementById('work-term-3-head').style.display='none'">X</button></h3>
+			<div class="page" id="work-term-3">
+				<button class="work-term-3-bt active" id="work-term-1-intro-head" onclick="hide('work-term-3', 'work-term-3-intro');">General</button>
+				<button class="work-term-3-bt" id="onboarding-head" onclick="hide('work-term-3', 'onboarding');">Onboarding</button>
+				<button class="work-term-3-bt" id="termination-head" onclick="hide('work-term-3', 'termination');">Terminations</button>
+				<button class="work-term-3-bt" id="vulnerability-mitigation-head" onclick="hide('work-term-3', 'vulnerability-mitigation');">Vulnerabilities</button>
+				<button class="work-term-3-bt" id="macbook-support-head" onclick="hide('work-term-3', 'macbook-support');">MacBook Support</button>
+				<p class="work-term-3" id="work-term-3-intro">
+					My last work term was with Axis Capital in their Business Technology Centre in Halifax. I worked with the End User Computing (EUC) team doing new hire equipment preparation, termination equipment recovery, vulnerability mitigations, and other end-user services.
+				</p>
+				<p class="work-term-3" id="onboarding" style="display:none;">
+					One of my responsibilities as a business technology co-op intern was to prepare equipment for new hires. This involved prepping a laptop and often a phone, then introducing them to the various programs we use and going over various rules for the technology. <br/>My process consisted of imaging a laptop, then running a driver update scan, security scan (to make sure it was up to date on any patches and compliant), then an inventory scan to report back to the client. Once the laptop was prepped, I would reset the user's account password to a new one I made up and log into the laptop on that account. Then I would go through associating the account with the laptop, and logging into Outlook, Webex, and our VPN to make sure they're all set. I'd also connect the Webex phone services and run a gpupdate. <br/>Once I had access to their email, I'd begin setting up the iPhone. This meant going through Apple's setup which would start our company portal's maintenance and compliance procedure. This would sometimes require a system upgrade if the phone was out of date. I would also have to create a new Apple ID which I would verify with their email I was logged into. Once the phone was open, I'd set a passcode, enter App Store account information, and go into the Comp Portal which would check for system compliance and begin downloading the company apps. Once everything was downloaded, I would check they're all syncing right, and that would be the end of my preparation, unless there were requests for certain software to be installed on the laptop, which I would install and prepare for the user. <br/>Once the equipment is ready, I get the new hire's personal email from HR and send them a welcome message asking to set a time for us to go over their equipment and stuff. Then they are all ready for their first day at Axis!
+				</p>
+				<p class="work-term-3" id="termination" style="display:none;">
+					Another job I was responsible for was all the way on the other side of the Axis employee lifecycle. When an employee is terminated, they must return their company laptop and charger, as well as iPhone and charger if they were provided one. Sometimes if the employee is local and feeling nice about their termination, they will bring the equipment back into the office, but oftentimes termination is a sensitive subject, or they are too far from the office for convenience and then we must retrieve their equipment ourselves. <br/>To do this, we ship the terminated employee an empty Purolator box with bubble wrap and a return shipping label inside. Then we will get in contact with them through HR and sort out the packing and return shipping. <br/>Once they ship the equipment back, we must wipe them (both physically (with a cloth or something) and figuratively (like wipe the drive)). This is straight forward with the laptops as you just have to interrupt the boot process and run a program. iPhones are a little more complicated, as without the Apple ID password you cannot erase and restore an iPhone through the settings. Instead, I would download iTunes, put the iPhone into recovery mode, and update and restore the phone through my laptop. Then all that's left is to update inventory <i class="fa-solid fa-face-smile-beam"></i>
+				</p>
+				<p class="work-term-3" id="vulnerability-mitigation" style="display:none;">
+					As part of the monthly patching, there would sometimes be machines who did not patch successfully or rebooted before it could complete. In these cases, there is often a vulnerability on their machine from some out-of-date software. To mitigate this, we must contact the user, remote into their machine, and using our Admin account install the update provided by the patching and infrastructure teams. This is often not too much work, but sometimes there are several steps such as accessing the registry editor and other property changes.
+				</p>
+				<p class="work-term-3" id="macbook-support" style="display:none;">
+					In my last month at Axis, my supervisor Sean invited me to do some work with the MacBook support team. I attended meetings twice a week and we set up a company MacBook for me to test on. As part of the MacBook Support Group, I had access to the team planner with all the tasks necessary to configure MacBooks as they were new at Axis. I got to see the backend of the configuration through JAMF and work on a couple tasks with Sean. <br/>The first configuration profile we worked on was restricting users .app privileges so that they cannot run applications that they download. We blocked .app from running out of user folders except for the user’s library as that held some updaters that need to run. After some troubleshooting, we got the configuration profile to production! <br/>Next, we worked on some wired internet access policies and notification an AutoStart settings for certain programs.
+				</p>
+			</div>
+			</div>
+    <div class="header" id="search-box-head" style="top:30%;left:35%;height:fit-content;width:700px;z-index:1;">
+    <h3>Search Box
+    <button class="close-bt" onclick="document.getElementById('search-box-head').style.display='none'">X</button></h3>
+    <div class="page" id="search-box">
+       <iframe src="searchbox/searchbox.html"></iframe>
+  </div>
+  </div>
+  <div class="header" id="pol-head" style="top:30%;left:35%;height:fit-content;width:700px;z-index:1;">
+  <h3>Policy Check
+  <button class="close-bt" onclick="document.getElementById('pol-head').style.display='none'">X</button></h3>
+  <div class="page" id="pol">
+  </div>
+</div>
+</div>
+		<div class="taskbar">
+			<button class="start-button" onclick="closeAll();"><img class="start" alt="windows logo icon" src="images/windows-logo-icon.png"/>Sarah MacDonald</button>
+			<p class="time" id="clock">12:34:56 AM</p>
+		</div>
+	</body>
+<html>
